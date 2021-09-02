@@ -1,27 +1,35 @@
-# MyWorkspace
+# desumit/ngx-toggle-password
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+Install this package by using the command `npm i @desumit/ngx-toggle-password`
 
-## Development server
+## Use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+import { NgxTogglePasswordModule } from '@desumit/ngx-toggle-password';
 
-## Code scaffolding
+Add the above line in your app.module.ts file.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Also add on imports array in app.module.ts file like this 
 
-## Build
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgxTogglePasswordModule
+  ],
+  
+ Add styles in angular.json file like this :
+ 
+ "styles": [
+              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/solid.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/regular.scss",
+              "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@desumit/ngx-toggle-password/style.css",
+              "src/styles.css"
+            ],
+            
+That's it. You are ready to use the package.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+In your html file you can use this as :
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<input type="password" class="form-control" ngxTogglePassword placeholder="Password">
